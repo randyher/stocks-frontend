@@ -6,21 +6,21 @@ import { Link } from "react-router-dom";
 class Login extends React.Component {
   state = {
     email: "",
-    password: ""
+    password: "",
   };
 
   onSubmit = () => {
     this.props.signIn(this.state);
   };
 
-  onChange = event => {
+  onChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
   render() {
     return (
       <div className="login-comp">
-        <h1> Sign In </h1>
+        <h1> Sign In! </h1>
         <div className="login-box">
           <Form onSubmit={this.onSubmit}>
             <Form.Field
